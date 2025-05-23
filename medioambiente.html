@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>VR - Medio Ambiente y Huella de Carbono</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene vr-mode-ui="enabled: true">
+      <!-- Cámara con controles para VR -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+      <!-- Piso verde claro sin textura -->
+      <a-plane
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="40"
+        height="40"
+        color="#A8D5BA"
+      ></a-plane>
+
+      <!-- Árboles mejorados con troncos marrones y follaje verde vivo -->
+      <a-cylinder position="-6 1 -5" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="-6 4 -5" radius="1.5" color="#2E7D32" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="5 1 -8" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="5 4 -8" radius="1.5" color="#388E3C" segments-height="18" segments-width="36"></a-sphere>
+
+      <!-- Más árboles alrededor -->
+      <a-cylinder position="-8 1 -10" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="-8 4 -10" radius="1.5" color="#2E7D32" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="7 1 -3" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="7 4 -3" radius="1.5" color="#388E3C" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="0 1 -15" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="0 4 -15" radius="1.5" color="#2E7D32" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="-10 1 -2" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="-10 4 -2" radius="1.5" color="#2E7D32" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="8 1 -12" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="8 4 -12" radius="1.5" color="#388E3C" segments-height="18" segments-width="36"></a-sphere>
+
+      <!-- Plantas adicionales (arbustos) -->
+      <a-sphere
+        position="2 0.5 -3"
+        radius="0.5"
+        color="#4CAF50"
+        segments-height="12"
+        segments-width="24"
+      ></a-sphere>
+      <a-sphere
+        position="3 0.6 -4"
+        radius="0.7"
+        color="#66BB6A"
+        segments-height="12"
+        segments-width="24"
+      ></a-sphere>
+      <a-sphere
+        position="-3 0.5 -6"
+        radius="0.5"
+        color="#43A047"
+        segments-height="12"
+        segments-width="24"
+      ></a-sphere>
+
+      <!-- Fábrica con colores más suaves y menos oscuros -->
+      <a-box position="0 1 -10" width="4" height="2" depth="4" color="#A9A9A9" opacity="0.9"></a-box>
+      <a-cylinder position="1 3 -10" radius="0.3" height="2" color="#7B7B7B" opacity="0.8"></a-cylinder>
+      <a-cone
+        position="1 4.5 -10"
+        radius-bottom="0.5"
+        radius-top="0"
+        height="1"
+        color="#B0BEC5"
+        opacity="0.6"
+      ></a-cone>
+      <a-entity
+        position="1 6 -10"
+        particle-system="preset: dust; particleCount: 800; color: #888; size: 0.15"
+      ></a-entity>
+
+      <!-- Panel educativo original (frente) -->
+      <a-plane
+        position="0 2 -4"
+        rotation="0 0 0"
+        width="5"
+        height="2.5"
+        color="#D0F0C0"
+        material="opacity: 0.9"
+      >
+        <a-text
+          value="🌍 Reduce tu huella de carbono\n🚲 Usa bicicleta\n🌱 Planta árboles\n⚡ Ahorra energía"
+          align="center"
+          color="#ffffff"
+          width="4.5"
+          position="0 0 0.01"
+          font="mozillavr"
+        ></a-text>
+      </a-plane>
+
+      <!-- Panel derecha -->
+      <a-plane
+        position="4 2 0"
+        rotation="0 -90 0"
+        width="5"
+        height="2.5"
+        color="#C8E6C9"
+        material="opacity: 0.9"
+      >
+        <a-text
+          value="🚶‍♂️ Camina o usa transporte publico\n🔌 Apaga dispositivos\n♻️ Recicla adecuadamente"
+          align="center"
+          color="#ffffff"
+          width="4.5"
+          position="0 0 0.01"
+          font="mozillavr"
+        ></a-text>
+      </a-plane>
+
+      <!-- Panel izquierda -->
+      <a-plane
+        position="-4 2 0"
+        rotation="0 90 0"
+        width="5"
+        height="2.5"
+        color="#C8E6C9"
+        material="opacity: 0.9"
+      >
+        <a-text
+          value="💡 Usa bombillas LED\n🚿 Reduce consumo de agua\n🥦 Prefiere alimentos locales"
+          align="center"
+          color="#ffffff"
+          width="4.5"
+          position="0 0 0.01"
+          font="mozillavr"
+        ></a-text>
+      </a-plane>
+
+      <!-- Panel atrás -->
+      <a-plane
+        position="0 2 4"
+        rotation="0 180 0"
+        width="5"
+        height="2.5"
+        color="#C8E6C9"
+        material="opacity: 0.9"
+      >
+        <a-text
+          value="🌳 Planta arboles regularmente\n🌞 Aprovecha energia solar\n🛒 Reduce consumo plastico"
+          align="center"
+          color="#ffffff"
+          width="4.5"
+          position="0 0 0.01"
+          font="mozillavr"
+        ></a-text>
+      </a-plane>
+
+      <!-- Árboles adicionales atrás -->
+      <a-cylinder position="-4 1 6" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="-4 4 6" radius="1.5" color="#2E7D32" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="0 1 7" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="0 4 7" radius="1.5" color="#388E3C" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="3 1 5" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="3 4 5" radius="1.5" color="#2E7D32" segments-height="18" segments-width="36"></a-sphere>
+
+      <a-cylinder position="6 1 8" radius="0.3" height="3" color="#6B4226"></a-cylinder>
+      <a-sphere position="6 4 8" radius="1.5" color="#388E3C" segments-height="18" segments-width="36"></a-sphere>
+
+      <!-- Sol más brillante y con luz ambiental para iluminar la escena -->
+      <a-sphere
+        position="-10 25 -20"
+        radius="6"
+        color="#FFEE58"
+        light="type: point; intensity: 1.2; distance: 70; decay: 2"
+        emissive="#FFEE58"
+        emissiveIntensity="1"
+      ></a-sphere>
+
+      <!-- Luz ambiental para aclarar toda la escena -->
+      <a-entity light="type: ambient; color: #A8D5BA; intensity: 0.6"></a-entity>
+
+      <!-- Cielo azul claro -->
+      <a-sky color="#A3D9FF"></a-sky>
+    </a-scene>
+  </body>
+</html>
